@@ -27,7 +27,7 @@
     <hr />
 
     <p>消息内容为HTML的消息弹窗</p>
-    <l-button @click="HtmlToast">消息内容为一段HTML字符串</l-button>
+    <l-button @click="htmlToast">消息内容为一段HTML字符串</l-button>
     <code-wrapper class="top-margin" v-html="markdown(htmlContent)"></code-wrapper>
 
     <l-attribute slotContent="Options"></l-attribute>
@@ -195,12 +195,12 @@ export default {
     }`}
     `,
       htmlContent: `
-    <l-button @click="HtmlToast">消息内容为一段HTML字符串</l-button>
+    <l-button @click="htmlToast">消息内容为一段HTML字符串</l-button>
 
     ${`//Vue实例中的方法
-    HtmlToast() {
+    htmlToast() {
       this.$toast(
-        "<i>这是一个用了i标签包裹的<a href='https://www.baidu.com' target="_blank">超链接</a>，高亮文字可点击跳转</i>",
+        "<i>这是一个用了i标签包裹的<a href='https://www.baidu.com' target='_blank'>超链接</a>，高亮文字可点击跳转</i>",
         {
           autoClose: false,
           position: "middle",
@@ -208,7 +208,7 @@ export default {
         }
       );
     }`}
-    `
+    `,
     };
   },
   methods: {
@@ -220,24 +220,24 @@ export default {
     },
     showToastMiddle() {
       this.$toast("这是中间的消息弹窗", {
-        position: "middle"
+        position: "middle",
       });
     },
     showToastBottom() {
       this.$toast("这是下面的消息弹窗", {
-        position: "bottom"
+        position: "bottom",
       });
     },
     unautoClose() {
       this.$toast(`需要点击关闭按钮才会关闭`, {
         autoClose: false,
-        position: "middle"
+        position: "middle",
       });
     },
     threeMClose() {
       this.$toast(`3秒后自动关闭`, {
         autoClose: 3,
-        position: "middle"
+        position: "middle",
       });
     },
     callbackToast() {
@@ -247,22 +247,22 @@ export default {
           message: "callback",
           callback() {
             console.log("Toast!");
-          }
+          },
         },
-        position: "middle"
+        position: "middle",
       });
     },
-    HtmlToast() {
+    htmlToast() {
       this.$toast(
         `<i>这是一个用了i标签包裹的<a href='https://www.baidu.com' target="_blank">超链接</a>，高亮文字可点击跳转</i>`,
         {
           autoClose: false,
           position: "middle",
-          enableHtml: true
+          enableHtml: true,
         }
       );
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -270,7 +270,7 @@ export default {
 .top-margin {
   margin-top: 25px;
 }
-.button-wrapper button{
+.button-wrapper button {
   margin-right: 20px;
 }
 </style>

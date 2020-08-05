@@ -267,6 +267,11 @@ export default {
       .bg-color3 {
         background: #e5e9f2;
       }
+      .col {
+        border-radius: 4px;
+        margin-bottom: 10px;
+        min-height: 40px;
+      }
       `,
       gutterRowContent: `
       <l-row gutter="20">
@@ -290,6 +295,11 @@ export default {
       .bg-color3 {
         background: #e5e9f2;
       }
+      .col {
+        border-radius: 4px;
+        margin-bottom: 10px;
+        min-height: 40px;
+      }
       `,
       selectedTab: "sports",
       autoRowContent: `
@@ -304,6 +314,11 @@ export default {
       }
       .bg-color3 {
         background: #e5e9f2;
+      }
+      .col {
+        border-radius: 4px;
+        margin-bottom: 10px;
+        min-height: 40px;
       }
       `,
       positionRowContent: `
@@ -320,6 +335,11 @@ export default {
       //style的样式
       .bg-color2 {
         background: #d3dce6;
+      }
+      .col {
+        border-radius: 4px;
+        margin-bottom: 10px;
+        min-height: 40px;
       }
       `
     };
@@ -354,7 +374,3 @@ export default {
   min-height: 40px;
 }
 </style>
-
-
-
-

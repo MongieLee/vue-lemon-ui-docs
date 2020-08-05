@@ -4,7 +4,9 @@
     <h3>npm 安装</h3>
     <p>推荐使用 npm 的方式安装</p>
     <code-wrapper>npm i vue-lemon-ui -S</code-wrapper>
-    <h2>引入 LemonUI</h2>
+    <h2 class="title">正式使用本框架之前，请在css中开启border-box</h2>
+    <code-wrapper v-html="markdown(cssString)"></code-wrapper>
+    <h2 class="title">引入 LemonUI</h2>
     <p>你可以引入整个 LemonUI，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 LemonUI。</p>
     <p>以上代码便完成了 LemonUI 的引入。需要注意的是，样式文件需要单独引入。</p>
     <code-wrapper v-html="markdown(needString)"></code-wrapper>
@@ -22,6 +24,13 @@ import marked from "marked";
 export default {
   data() {
     return {
+      cssString:`
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      `,
       needString: `
     import Vue from 'vue';
     import LemonUI from 'vue-lemon-ui';

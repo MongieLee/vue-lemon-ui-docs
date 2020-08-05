@@ -7,7 +7,7 @@
     <p>本人联系方式：le30n@outlook.com，欢迎交流学习!</p>
     <p>
       Github源码地址：
-      <a target="_blank" href="https://github.com/MongieLai">仓库</a>
+      <a target="_blank" href="https://github.com/MongieLai/vue-lemon-ui#readme">仓库</a>
     </p>
   </div>
 </template>
